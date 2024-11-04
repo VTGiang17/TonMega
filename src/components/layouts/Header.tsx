@@ -1,6 +1,6 @@
 import { Button, Drawer, Flex } from "antd";
 import { IconMenuClose, IconMenuOpen } from "../common/ShareIcon";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import classNames from "classnames";
 import appLogo from "../../assets/logo.svg";
 import HeaderMenu from "./HeaderMenu";
@@ -9,28 +9,24 @@ import "./header.scss";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const screenSize = window.innerWidth;
 
-  const handleScroll = useCallback(() => {
+  const handleScroll = () => {
     const scrollTop = window.scrollY;
     if (scrollTop > 0) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
     }
-  }, [setIsScrolled]);
-
+  };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const screenSize = window.innerWidth;
 
   return (
     <header
@@ -79,7 +75,7 @@ function Header() {
         <>
           <HeaderMenu />
           {!isScrolled ? (
-            <Button className="NeonDarkBtn w-[160px] h-[44px]">
+            <Button className="banner-btn--neon w-[160px] h-[44px] text-white">
               Get Reward
             </Button>
           ) : null}

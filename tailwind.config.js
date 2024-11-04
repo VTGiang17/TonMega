@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,11 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Poppins"],
+        serif: ["Poppins", ...defaultTheme.fontFamily.serif],
       },
-    },
-    fontFamily: {
-      Poppins: "Poppins, sans-serif",
     },
     colors: {
       white: "#FBF9F1",
