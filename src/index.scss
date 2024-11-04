@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+@layer base {
+  html,
+  body,
+  * {
+    font-family: "Poppins", serif;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.NeonDarkBtn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  background: linear-gradient(90deg, #0054aa 0%, #0088cc 51%, #564787 100%);
+  border: 1px solid;
+  box-shadow: 2px 0px 10px 3px rgba(255, 255, 255, 0.4) inset;
+
+  border-image-source: linear-gradient(
+    90deg,
+    #0054aa 0%,
+    #0088cc 51%,
+    #564787 100%
+  );
+}
+.banner-title {
+  width: 830px;
+  height: 162px;
+  font-size: 54px;
+  font-weight: 600;
+  color: white;
+}
+
+.pos-review {
+  backdrop-filter: blur(60px);
+  background: rgba(255, 255, 255, 0.1);
+}
