@@ -10,7 +10,7 @@ import "./header.scss";
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const screenSize = window.innerWidth;
+  const [screen, setScreen] = useState(window.innerWidth);
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
@@ -22,9 +22,11 @@ function Header() {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", () => setScreen(window.innerWidth));
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", () => setScreen(window.innerWidth));
     };
   }, []);
 
@@ -42,7 +44,7 @@ function Header() {
       <div className="w-[90px] xl:w-[130px]">
         <img src={appLogo} alt="logo" className="w-full" />
       </div>
-      {screenSize < BREAKPOINTS.xl ? (
+      {screen < BREAKPOINTS.xl ? (
         <>
           <Drawer
             open={isMenuOpen}
@@ -65,7 +67,7 @@ function Header() {
             <HeaderMenu />
           </Drawer>
           <IconMenuOpen
-            className="ms-auto"
+            className="ms-auto cursor-pointer"
             onClick={() => {
               setMenuOpen(true);
             }}

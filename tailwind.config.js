@@ -14,6 +14,8 @@ module.exports = {
     colors: {
       white: "#FBF9F1",
       black: "rgba(17, 17, 17, 1)",
+      greyMain: "rgba(107, 107, 107, 1)",
+      neonDark: " rgba(0, 84, 170, 1)",
     },
   },
   plugins: [],
