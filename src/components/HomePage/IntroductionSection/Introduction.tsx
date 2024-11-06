@@ -23,7 +23,7 @@ function Introduction() {
         <div className="home__section__content">
           <Flex vertical className="card-item">
             <div className="mb-[20px] xl:mb-[40px]">
-              <IconHand />
+              <IconHand style={{ width: 120, height: 120 }} />
               <div>
                 <Typography.Text className="!text-base font-semibold text-black">
                   {" "}
@@ -42,7 +42,7 @@ function Introduction() {
           </Flex>
           <Flex vertical className="card-item">
             <div className="mb-[20px] xl:mb-[40px]">
-              <LogoPOS />
+              <LogoPOS style={{ width: 120, height: 120 }} />
               <div>
                 <Typography.Text className="!text-base font-semibold text-black">
                   {" "}
@@ -61,7 +61,7 @@ function Introduction() {
           </Flex>
           <Flex vertical className="card-item">
             <div className="mb-[20px] xl:mb-[40px]">
-              <IconMoney />
+              <IconMoney style={{ width: 120, height: 120 }} />
               <div>
                 <Typography.Text className="!text-base font-semibold text-black">
                   {" "}

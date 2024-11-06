@@ -13,20 +13,25 @@
     }
     .app-header__menu {
       margin-left: auto;
+      margin-right: auto;
     }
   }
   @media (min-width: 1280px) {
-    align-items: center;
-    justify-content: space-between;
     left: 120px;
     right: 120px;
     z-index: 99;
-    position: fixed;
     padding: 40px 0;
   }
 }
 
 .app-header__menu-mobile {
+  .ant-drawer-body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
   &.ant-drawer-content {
     background: #000000;
   }
@@ -45,6 +50,9 @@
     font-weight: 600;
   }
   .app-header__menu__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     + .app-header__menu__item {
       margin-top: 40px;
     }

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import DropDownMenu from "./DropDownMenu";
 
 function HeaderMenu() {
   return (
@@ -28,10 +29,13 @@ function HeaderMenu() {
           Our Team
         </Link>
       </li>
-      <li className="app-header__menu__item">
+      {/*<li className="app-header__menu__item">
         <Link to="/" className="app-header__menu__link text-white">
           My Account
         </Link>
+      </li>*/}
+      <li className="app-header__menu__item">
+        <DropDownMenu />
       </li>
     </ul>
   );

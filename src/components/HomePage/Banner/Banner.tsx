@@ -1,4 +1,4 @@
-import { Button, Flex, Typography } from "antd";
+import { Flex, Typography } from "antd";
 import bannerBg from "../../../assets/banner_bg.png";
 import { LogoPOS } from "../../common/ShareIcon";
 
@@ -7,7 +7,7 @@ function Banner() {
     <>
       <Flex
         vertical
-        className={`bg-black w-full min-h-screen bg-no-repeat bg-cover bg-center`}
+        className={`bg-black w-full min-h-screen bg-no-repeat bg-cover bg-top xl:bg-[length:150%]`}
         style={{
           backgroundImage: `url(${bannerBg})`,
         }}
@@ -26,13 +26,13 @@ function Banner() {
               Premium package with 5000 USDT.
             </Typography.Text>
           </div>
-          <Flex justify="center" className="mt-[35px]">
+          {/*<Flex justify="center" className="mt-[35px]">
             <Button className="banner-btn--black btn">READ MORE</Button>
-          </Flex>
+          </Flex>*/}
         </div>
         <Flex
           vertical
-          className="mb-0 p-10 mx-auto mt-[80px] pos-review max-w-[1200px]  xl:mt-[120px] xl:mb-[40px] xl:rounded-[15px]"
+          className="mb-0 p-10 mx-auto mt-auto pos-review max-w-[1200px]  xl:mt-[120px] xl:mb-[40px] xl:rounded-[15px]"
         >
           <Flex className="justify-start xl:mb-[24px]">
             <LogoPOS className="" />

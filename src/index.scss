@@ -169,20 +169,20 @@ img {
     content: "";
     position: absolute;
     z-index: -1;
-    top: -16px;
-    right: -16px;
+    top: 0;
+    right: 0;
     background: rgba(0, 84, 170, 1);
     height: 32px;
     width: 32px;
-    border-radius: 32px;
+    border-radius: 0 4px 0 32px;
     transform: scale(1);
     transform-origin: 50% 50%;
-    transition: transform 0.25s ease-out;
+    transition: transform 0.3s ease-out;
   }
 
   &:hover {
     &:before {
-      transform: scale(21);
+      transform: scale(41);
     }
 
     p {
@@ -209,4 +209,23 @@ img {
 
 .ourteam--card {
   box-shadow: 0px 1px 38px -5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+  transition: all ease-in-out 0.3s;
+  .dropdown__item {
+    padding: 5px 0 5px 12px;
+    transition: all ease-in-out 0.3s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+  .dropdown__logout {
+    padding: 5px 0 5px 12px;
+    transition: all ease-in-out 0.3s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: red;
+    }
+  }
 }
