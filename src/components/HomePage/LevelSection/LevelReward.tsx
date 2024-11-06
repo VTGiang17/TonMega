@@ -1,5 +1,4 @@
 import { Flex, Typography } from "antd";
-import React from "react";
 import LevelCard from "./LevelCard";
 
 function LevelReward() {

@@ -1,5 +1,4 @@
 import { Card } from "antd";
-import React from "react";
 import { IconList } from "../../common/ShareIcon";
 
 function SliderCard() {

@@ -1,4 +1,3 @@
-import React from "react";
 interface IText {
   title?: string;
   title2?: string;

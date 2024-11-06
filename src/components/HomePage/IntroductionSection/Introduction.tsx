@@ -1,5 +1,4 @@
 import { Flex, Typography } from "antd";
-import React from "react";
 import { IconHand, IconMoney, LogoPOS } from "../../common/ShareIcon";
 
 function Introduction() {

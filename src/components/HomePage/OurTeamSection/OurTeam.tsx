@@ -1,5 +1,4 @@
 import { Flex, Typography } from "antd";
-import React from "react";
 import OurTeamCard from "./OurTeamCard";
 
 function OurTeam() {
